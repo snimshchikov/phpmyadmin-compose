@@ -7,4 +7,4 @@ services:
      - PMA_ARBITRARY=1
     restart: always
     volumes:
-     - /sessions
+     - sessions:/sessions
