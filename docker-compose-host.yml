@@ -8,4 +8,4 @@ services:
     restart: always
     volumes:
      - sessions:/sessions
-    network: host
+    network_mode: host
