@@ -4,8 +4,11 @@ services:
   phpmyadmin:
     image: phpmyadmin
     hostname: ${HOSTNAME}
+    domainname: ${DOMAINNAME}
     environment:
      - PMA_ARBITRARY=${PMA_ARBITRARY} | 1
     restart: always
     volumes:
      - sessions:/sessions
+    extra_hosts:
+     - "host.docker.internal:host-gateway"
